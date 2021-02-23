@@ -23,7 +23,6 @@
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
-        background: #ff0000;
         transform: rotate(45deg) translate(5px, 5px);
       }
 
@@ -34,7 +33,6 @@
 
       // Line 3 - Rotate
       &:nth-child(3) {
-      background: #ff0000;
       transform: rotate(-45deg) translate(7px, -6px);
       }
     }
