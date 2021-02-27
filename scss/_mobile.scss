@@ -2,18 +2,30 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .container {
+    width: fit-content;
+    margin: auto;
+  }
 }
 
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .container {
+    max-width: 500px;
+    margin: auto;
+  }
 }
 
 @include mediaMd {
   main {
-    align-items: center;
-    text-align: center;
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
 
     .lg-heading {
       line-height: 1;
@@ -33,13 +45,13 @@
   }
 
   .menu-nav {
-    height: 75vh;
+    height: 100vh;
     transform: translate3d(-100%,0,0);
     font-size: 24px;;
   }
 
   .menu-branding {
-    height: 25vh;
+    height: 0vh;
     transform: translate3d(100%, 0, 0);
 
     .portrait {
@@ -75,9 +87,9 @@
       margin-top: 10vh;
     }
 
-    .lg-heading {
-      margin-top: 1rem;
-      font-size: 5rem;
+    .container {
+      width: fit-content;
+      margin: auto;
     }
   }
 
