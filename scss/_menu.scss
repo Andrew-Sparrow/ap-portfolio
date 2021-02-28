@@ -62,15 +62,15 @@
     overflow: hidden;
   }
 
+
   &-nav {
     margin: 0;
     padding: 0;
     background: darken($primary-color, 5);
     list-style: none;
-    transform: translate3d(0, -100%, 100%);
+    transform: translate3d(0, -100%, 0);
     @include easeOut;
     padding-left: 100px;
-
 
     &.show {
       // Slide in from top
@@ -107,6 +107,7 @@
 
     &.current > a {
       color: $secondary-color;
+      cursor: default;
     }
   }
 
@@ -117,6 +118,7 @@
     padding: 1rem 0;
     font-weight: 300;
     color: set-text-color($primary-color);
+    margin-bottom: 0;
   }
 
   .nav-link {

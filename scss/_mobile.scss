@@ -18,6 +18,11 @@
     max-width: 500px;
     margin: auto;
   }
+
+  .screenshot {
+    width: 250px;
+    height: auto;
+  }
 }
 
 @include mediaMd {
@@ -31,6 +36,10 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+
+    // .box-text {
+      // margin-bottom: 150px;
+    // }
   }
 
   ul.menu-nav,
@@ -90,6 +99,26 @@
     .container {
       width: fit-content;
       margin: auto;
+    }
+
+    .wrapper {
+      display: block;
+    }
+
+    .crop {
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+
+    .screenshot {
+      width: 250px;
+      height: auto;
+    }
+
+    .box-text {
+      font-size: 20px;
+      margin-bottom: 60px;
     }
   }
 
