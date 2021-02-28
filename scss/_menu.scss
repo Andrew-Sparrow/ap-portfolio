@@ -67,9 +67,10 @@
     padding: 0;
     background: darken($primary-color, 5);
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 100%);
     @include easeOut;
     padding-left: 100px;
+
 
     &.show {
       // Slide in from top
@@ -103,6 +104,7 @@
       transform: translate3d(0, 0, 0);
     }
 
+
     &.current > a {
       color: $secondary-color;
     }
@@ -134,9 +136,8 @@
   }
 }
 
-
 // Delay each nav item
-@for $x from 1 through 4 {
+@for $x from 1 through 6 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
