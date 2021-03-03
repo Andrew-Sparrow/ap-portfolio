@@ -1,96 +1,8 @@
-@include mediaXL {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .container {
-    width: fit-content;
-    margin: auto;
-  }
-}
-
-@include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .container {
-    max-width: 500px;
-    margin: auto;
-  }
-
-  .screenshot {
-    width: 250px;
-    height: auto;
-  }
-}
-
-@include mediaMd {
-  main {
-    .container {
-      max-width: 500px;
-      margin: auto;
-    }
-
-    .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    // .box-text {
-      // margin-bottom: 150px;
-    // }
-  }
-
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .menu-nav {
-    height: 100vh;
-    transform: translate3d(-100%,0,0);
-    font-size: 24px;;
-  }
-
-  .menu-branding {
-    height: 0vh;
-    transform: translate3d(100%, 0, 0);
-
-    .portrait {
-      background: url('../img/portraite.jpg');
-      width: 128px;
-      height: 179px;
-      background-size: cover;
-    }
-  }
-
-  .about-info {
-    grid-template-areas:
-    'bioimage'
-    'bio'
-    'job1'
-    'job2'
-    'job3';
-
-    grid-template-columns: 1fr;
-  }
-
-
-    .projects {
-      grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@include mediaSm {
+// @include mediaSm {
   main {
     padding: 2rem;
+    // height: 100%;
+    min-width: 320px;
 
     #home h1 {
       margin-top: 10vh;
@@ -109,20 +21,177 @@
       height: 400px;
       overflow: hidden;
       margin-bottom: 50px;
+
+      .screenshot {
+        width: 250px;
+      }
+    }
+
+    .box {
+      padding-left: 0;
+    }
+
+
+    .box-text {
+      font-size: 20px;
+      margin-bottom: 60px;
+      padding-left: 1rem;
+
+      &.box-text_title {
+        font-size: 35px;
+        font-weight: 600;
+      }
+    }
+
+    .technologies {
+      padding-left: 40px;
+    }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+// }
+
+
+@include mediaMd {
+  main {
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .wrapper {
+      display: flex;
+    }
+
+    .box {
+      padding-left: 50px;
+    }
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
     }
 
     .screenshot {
       width: 250px;
       height: auto;
     }
+  }
 
-    .box-text {
-      font-size: 20px;
-      margin-bottom: 60px;
+  .box-text {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  .projects {
+  .menu-nav {
+    height: 100vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+    ;
+  }
+
+  .menu-branding {
+    height: 0vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url('../img/portraite.jpg');
+      width: 128px;
+      height: 179px;
+      background-size: cover;
+    }
+  }
+
+  .about-info {
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+
     grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wrapper {
+    display: flex;
+    min-width: 300px;
+    overflow: visible;
+  }
+
+  .box {
+    min-width: 300px;
+    padding-left: 50px;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .screenshot {
+    min-width: 250px;
+    height: auto;
+  }
+
+  .box-text {
+    max-width: 700px;
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+@include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .wrapper {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .box {
+    padding-left: 50px;
+  }
+
+  .screenshot {
+    width: 250px;
+    height: auto;
+  }
+
+  .box-text {
+    max-width: 700px;
+    font-size: 20px;
+    margin-bottom: 60px;
   }
 }

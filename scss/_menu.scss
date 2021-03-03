@@ -8,6 +8,7 @@
   top: 35px;
   cursor: pointer;
   @include easeOut;
+  background-color: $primary-color;
 
   .btn-line {
     width: 28px;
