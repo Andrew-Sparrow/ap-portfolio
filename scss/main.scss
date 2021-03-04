@@ -13,6 +13,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5 ;
+  // overflow-x: hidden;
 }
 
 // Headings
@@ -20,9 +21,9 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400;
 
-  &.lg-heading {
-    font-size: 6rem;
-  }
+  // &.lg-heading {
+  //   font-size: 6rem;
+  // }
 
   &.sm-heading {
     margin-bottom: 2rem;
@@ -47,7 +48,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  // padding: 4rem;
   height: 100%;
   min-height: calc(100vh - 60px);
 

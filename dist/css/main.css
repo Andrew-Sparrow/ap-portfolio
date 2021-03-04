@@ -132,8 +132,6 @@ body {
 h1, h2, h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -152,7 +150,6 @@ header {
   color: #eece1a; }
 
 main {
-  padding: 4rem;
   height: 100%;
   min-height: calc(100vh - 60px); }
   main .icons {
@@ -252,51 +249,65 @@ main {
   width: 100%;
   overflow: hidden; }
 
-main {
-  padding: 2rem;
-  min-width: 320px; }
-  main #home h1 {
-    margin-top: 10vh; }
-  main .container {
-    width: fit-content;
-    margin: auto; }
-  main .wrapper {
-    display: block; }
-  main .crop {
-    height: 400px;
-    overflow: hidden;
-    margin-bottom: 50px; }
-    main .crop .screenshot {
-      width: 250px; }
-  main .box {
-    padding-left: 0; }
-  main .box-text {
-    font-size: 20px;
-    margin-bottom: 60px;
-    padding-left: 1rem; }
-    main .box-text.box-text_title {
-      font-size: 35px;
-      font-weight: 600; }
-  main .technologies {
-    padding-left: 40px; }
+@media screen and (max-width: 320px) {
+  main {
+    padding: 30px;
+    min-width: 285px; }
+    main#home h1 {
+      margin-top: 20vh;
+      padding-bottom: 30px; }
+    main#home .lg-heading {
+      font-size: 53px;
+      line-height: 1; }
+    main#home .sm-heading {
+      width: 230px; }
+    main .container {
+      width: 280px;
+      margin: auto; }
+    main#markup .wrapper {
+      display: block; }
+    main#markup .crop {
+      width: 250px;
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 50px; }
+      main#markup .crop .screenshot {
+        width: 250px; }
+    main#markup .box {
+      padding-left: 0; }
+    main#markup .box-text {
+      font-size: 20px;
+      margin-bottom: 60px;
+      padding-left: 1rem; }
+      main#markup .box-text.box-text_title {
+        font-size: 35px;
+        font-weight: 600; }
+    main#markup .technologies {
+      padding-left: 40px; }
+    main .projects {
+      grid-template-columns: 1fr; } }
 
-.projects {
-  grid-template-columns: 1fr; }
-
-@media screen and (min-width: 501px) {
-  main .container {
-    max-width: 500px;
-    margin: auto; }
-  main .wrapper {
-    display: flex; }
-  main .box {
-    padding-left: 50px; }
-  main .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem; }
-  main .screenshot {
-    width: 250px;
-    height: auto; }
+@media screen and (min-width: 321px) {
+  main {
+    padding: 30px;
+    padding-bottom: 320px; }
+    main#home .lg-heading {
+      font-size: 60px; }
+    main .container {
+      max-width: fit-content;
+      margin: auto; }
+    main .sm-heading {
+      margin-bottom: 50px; }
+    main .wrapper {
+      display: flex; }
+    main .box {
+      padding-left: 50px; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main .screenshot {
+      width: 250px;
+      height: auto; }
   .box-text {
     font-size: 20px;
     margin-bottom: 60px; }
@@ -327,22 +338,24 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (min-width: 769px) {
-  .projects {
+  main#home .lg-heading {
+    font-size: 90px;
+    line-height: 1; }
+  main#markup .projects {
     grid-template-columns: repeat(3, 1fr); }
-  .wrapper {
+  main#markup .wrapper {
     display: flex;
     min-width: 300px;
     overflow: visible; }
-  .box {
-    min-width: 300px;
-    padding-left: 50px; }
-  .container {
-    max-width: 500px;
-    margin: auto; }
-  .screenshot {
+  main#markup .screenshot {
     min-width: 250px;
     height: auto; }
-  .box-text {
+  main .box {
+    min-width: 300px;
+    padding-left: 50px; }
+  main .container {
+    margin: auto; }
+  main .box-text {
     max-width: 700px;
     font-size: 20px;
     margin-bottom: 60px; } }
