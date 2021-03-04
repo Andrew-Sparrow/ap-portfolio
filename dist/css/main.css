@@ -285,7 +285,31 @@ main {
     main#markup .technologies {
       padding-left: 40px; }
     main .projects {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 100vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 0vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portraite.jpg");
+      width: 128px;
+      height: 179px;
+      background-size: cover; }
+  .menu .menu-nav {
+    padding-left: 60px; }
+    .menu .menu-nav .nav-link {
+      font-size: 25px; } }
 
 @media screen and (min-width: 321px) {
   main {
@@ -311,26 +335,6 @@ main {
   .box-text {
     font-size: 20px;
     margin-bottom: 60px; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 100vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 0vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portraite.jpg");
-      width: 128px;
-      height: 179px;
-      background-size: cover; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
