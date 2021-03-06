@@ -104,6 +104,10 @@
     .menu-nav {
       padding-left: 60px;
 
+      .nav-projects {
+        font-size: 27px;
+      }
+
       .nav-link {
         font-size: 23px;
       }
@@ -170,16 +174,14 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .menu-nav {
-    padding-left: 100px;
+  .menu {
+    .menu-nav {
+      padding-left: 100px;
+    }
   }
 
   .nav-link {
     font-size: 24px;
-  }
-
-  .nav-projects {
-    font-size: 27px;
   }
 }
 

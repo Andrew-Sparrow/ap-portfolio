@@ -307,6 +307,8 @@ main {
       grid-template-columns: 1fr; }
   .menu .menu-nav {
     padding-left: 60px; }
+    .menu .menu-nav .nav-projects {
+      font-size: 27px; }
     .menu .menu-nav .nav-link {
       font-size: 23px; } }
 
@@ -339,12 +341,10 @@ main {
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
-  .menu-nav {
+  .menu .menu-nav {
     padding-left: 100px; }
   .nav-link {
-    font-size: 24px; }
-  .nav-projects {
-    font-size: 27px; } }
+    font-size: 24px; } }
 
 @media screen and (min-width: 769px) {
   main#home .lg-heading {
