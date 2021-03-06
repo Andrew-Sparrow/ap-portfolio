@@ -1,4 +1,46 @@
-@include mediaSm {
+@include mediaSm;
+@include mediaMd;
+@include mediaLg;
+@include mediaXL;
+@include mediaSmMd;
+
+// mediaSmMd {
+//   .menu {
+//     &-nav,
+//     &-branding {
+//       float: none;
+//       width: 100%;
+//       min-height: 0;
+
+//       &.show {
+//         transform: translate3d(0, 0, 0);
+//       }
+//     }
+
+//     &-nav {
+//       height: 100vh;
+//       transform: translate3d(-100%, 0, 0);
+//       // font-size: 24px;
+//     }
+
+//     .nav-link {
+//       font-size: 10px;
+//     }
+
+//     &-branding {
+//       height: 0vh;
+//       transform: translate3d(100%, 0, 0);
+
+//       .portrait {
+//         background: url('../img/portrait_small.jpg');
+//         width: 150px;
+//         height: 150px;
+//       }
+//     }
+//   }
+// }
+
+mediaSm {
   main {
     padding: 30px;
     // height: 100%;
@@ -108,7 +150,7 @@
   }
 }
 
-@include mediaMd {
+mediaMd {
   main {
     padding: 30px;
     padding-bottom: 320px;
@@ -166,9 +208,38 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  // ul.menu-nav,
+  // div.menu-branding {
+  //   float: none;
+  //   width: 100%;
+  //   min-height: 0;
+
+  //   &.show {
+  //     transform: translate3d(0, 0, 0);
+  //   }
+  // }
+
+  // .menu-nav {
+  //   height: 100vh;
+  //   transform: translate3d(-100%, 0, 0);
+  //   font-size: 24px;
+  // }
+
+  // .menu-branding {
+  //   height: 0vh;
+  //   transform: translate3d(100%, 0, 0);
+
+  //   .portrait {
+  //     background: url('../img/portraite.jpg');
+  //     width: 128px;
+  //     height: 179px;
+  //     background-size: cover;
+  //   }
+  // }
 }
 
-@include mediaLg {
+mediaLg {
   main {
     &#home {
       .lg-heading {
@@ -210,57 +281,9 @@
       margin-bottom: 60px;
     }
   }
-
-  // ul.menu-nav,
-  // div.menu-branding {
-  //   float: none;
-  //   width: 50%;
-  //   min-height: 0;
-
-  //   &.show {
-  //     transform: translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // .menu-nav {
-  //   height: 100vh;
-  //   transform: translate3d(100%, 0, 0);
-  //   font-size: 24px;
-  //   ;
-  // }
-
-  // .menu-branding {
-  //   height: 0vh;
-  //   transform: translate3d(-100%, 0, 0);
-
-  //   .portrait {
-  //     background: url('../img/portraite.jpg');
-  //     width: 128px;
-  //     height: 179px;
-  //     background-size: cover;
-  //   }
-  // }
-
-  // .menu {
-  //   &-branding,
-  //   &-nav {
-  //     width: 50%;
-  //   }
-
-  //   &-nav {
-  //     transform: translate3d(0, -100%, 0);
-  //     @include easeOut;
-  //   }
-
-  //   // Branding Side
-  //   &-branding {
-  //     transform: translate3d(0, 100%, 0);
-  //     @include easeOut;
-  //   }
-  // }
 }
 
-@include mediaXL {
+mediaXL {
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
