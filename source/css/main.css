@@ -286,7 +286,6 @@ main {
     main#markup .wrapper {
       display: block; }
     main#markup .crop {
-      width: 250px;
       height: 400px;
       overflow: hidden;
       margin-bottom: 50px; }
