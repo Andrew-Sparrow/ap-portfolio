@@ -249,6 +249,25 @@ main {
   width: 100%;
   overflow: hidden; }
 
+@media screen and (max-width: 768px) {
+  .menu-nav, .menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu-nav.show, .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 100vh;
+    transform: translate3d(-100%, 0, 0);
+    padding-left: 40px; }
+  .menu-branding {
+    height: 0vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; } }
+
 @media screen and (max-width: 320px) {
   main {
     padding: 30px;
@@ -286,30 +305,12 @@ main {
       padding-left: 40px; }
     main .projects {
       grid-template-columns: 1fr; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 100vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 0vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portraite.jpg");
-      width: 128px;
-      height: 179px;
-      background-size: cover; }
   .menu .menu-nav {
     padding-left: 60px; }
+    .menu .menu-nav .nav-projects {
+      font-size: 27px; }
     .menu .menu-nav .nav-link {
-      font-size: 25px; } }
+      font-size: 23px; } }
 
 @media screen and (min-width: 321px) {
   main {
@@ -318,6 +319,8 @@ main {
     main#home .lg-heading {
       font-size: 60px; }
     main .container {
+      max-width: -webkit-fit-content;
+      max-width: -moz-fit-content;
       max-width: fit-content;
       margin: auto; }
     main .sm-heading {
@@ -339,7 +342,11 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .menu .menu-nav {
+    padding-left: 100px; }
+  .nav-link {
+    font-size: 24px; } }
 
 @media screen and (min-width: 769px) {
   main#home .lg-heading {
@@ -368,6 +375,8 @@ main {
   .projects {
     grid-template-columns: repeat(4, 1fr); }
   .container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: auto; }
   .wrapper {
