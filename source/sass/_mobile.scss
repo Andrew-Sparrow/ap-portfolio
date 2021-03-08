@@ -32,10 +32,10 @@
 
 @include mediaSm {
   main {
-    padding: 30px;
-    // height: 100%;
+    // padding: 30px;
+    height: 100%;
     min-width: 285px;
-    // padding-bottom: 62px;
+    padding-bottom: 0;
     // overflow: hidden;
 
     &#home {
@@ -85,8 +85,14 @@
         padding-left: 1rem;
 
         &.box-text_title {
-          font-size: 35px;
+          font-size: 45px;
           font-weight: 600;
+          margin-bottom: 0;
+        }
+
+        &.box-text_data {
+          font-size: 17px;
+          margin-top: -10px;
         }
       }
 
@@ -117,8 +123,8 @@
 
 @include mediaMd {
   main {
-    padding: 30px;
-    padding-bottom: 320px;
+    // padding: 30px;
+    // padding-bottom: 60px;
 
     &#home {
       .lg-heading {
@@ -157,6 +163,17 @@
   .box-text {
     font-size: 20px;
     margin-bottom: 60px;
+
+    &.box-text_title {
+      font-size: 52px;
+      margin-bottom: -17px;
+      margin-top: -23px;
+    }
+
+    &.box-text_data {
+      font-size: 17px;
+      margin-top: -10px;
+    }
   }
 
   .about-info {

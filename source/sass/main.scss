@@ -7,13 +7,14 @@
 
 body {
   @include background;
-  background: $primary-color;
-  color: set-text-color($primary-color);
+  // background: $primary-color;
+
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5 ;
   // overflow-x: hidden;
+  color: #fff;
 }
 
 // Headings
@@ -28,7 +29,19 @@ h1, h2, h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(darken($primary-color, 1), 0.9);
+    color: set-text-color($primary-color);
+  }
+}
+
+.wrapper-cat {
+  .sm-heading {
+    background: rgba(darken($primary-color, 100%), $background-opacity);
+  }
+}
+
+.wrapper-market {
+  .sm-heading {
+    background: rgba(darken($technomarket-color, 1), $background-opacity);
   }
 }
 
@@ -50,7 +63,7 @@ header {
 main {
   // padding: 4rem;
   height: 100%;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100% - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -70,6 +83,18 @@ main {
 
     h1 {
       margin-top: 20vh;
+    }
+  }
+
+  .box-text {
+    &.box-text_title {
+      font-size: 45px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    &.box-text_data {
+      font-size: 17px;
     }
   }
 }
@@ -110,6 +135,20 @@ main {
      padding: 0.5rem;
      border-bottom: $secondary-color 5px solid;
    }
+}
+
+.wrapper {
+  padding: 30px;
+  padding-bottom: 120px;
+
+}
+
+.wrapper-cat {
+  background: rgba($primary-color, $background-opacity);
+}
+
+.wrapper-market {
+  background: rgba($technomarket-color, $background-opacity);
 }
 
 .projects {

@@ -1,6 +1,8 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $green-color: #7fff00;
+$technomart-color: #293449;
+
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
@@ -23,29 +25,29 @@ $background-opacity: 0.9;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
+      // background: $home-image rgba($primary-color, $background-opacity);
+      background-image: $home-image;
+      // background-color: rgba($primary-color, $background-opacity);
+      // background-color: rgba(68, 68, 68, $background-opacity);
+      // background-color: $primary-color;
+
       background-attachment: fixed;
       background-size: cover;
+      // filter: blur(8px);
+      // -webkit-filter: blur(8px);
 
-       &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 130%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-       }
+      //  &::after {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   z-index: -1;
+      //   background: rgba($primary-color, $background-opacity);
+      //  }
     }
-  }
-}
-
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
   }
 }
 
@@ -56,13 +58,13 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaSm {
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 550px) {
     @content;
   }
 }
 
 @mixin mediaMd {
-  @media screen and (min-width: 321px) {
+  @media screen and (min-width: 551px) {
     @content;
   }
 }
