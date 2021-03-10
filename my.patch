@@ -1,0 +1,328 @@
+diff --git a/source/img/background-сopy.jpg b/source/img/background-сopy.jpg
+deleted file mode 100644
+index 036189c..0000000
+Binary files a/source/img/background-сopy.jpg and /dev/null differ
+diff --git a/source/img/projects/web_site_screenshot_technomart.jpg b/source/img/projects/web_site_screenshot_technomart.jpg
+deleted file mode 100644
+index c1e247d..0000000
+Binary files a/source/img/projects/web_site_screenshot_technomart.jpg and /dev/null differ
+diff --git a/source/markup.html b/source/markup.html
+index 86e76f8..3ca4c93 100644
+--- a/source/markup.html
++++ b/source/markup.html
+@@ -45,7 +45,7 @@
+       </nav>
+     </header>
+     <main id="markup">
+-      <div class="wrapper wrapper-cat">
++      <div class="wrapper">
+         <div class="crop">
+           <a href="https://andrew-sparrow.github.io/CatEnergy-GP" target="_blank">
+             <img
+@@ -57,15 +57,13 @@
+           </a>
+         </div>
+         <div class="box">
++          <h2 class="box-title sm-heading">Project name</h2>
+           <p class="box-text box-text_title">
+             Cat Energy
+           </p>
+-          <p class="box-text box-text_data">
+-            September 2019
+-          </p>
+           <h2 class="box-title sm-heading">Description</h2>
+           <p class="box-text">
+-            Online foodshop for cats
++            Online food shop for cats
+           </p>
+           <h2 class="box-title sm-heading">Technologies</h2>
+           <ul class="box-text technologies">
+@@ -97,40 +95,6 @@
+           <p class="box-text"></p>
+         </div>
+       </div>
+-      <div class="wrapper wrapper-market">
+-        <div class="crop">
+-          <a href="https://andrew-sparrow.github.io/CatEnergy-GP" target="_blank">
+-            <img
+-              class="screenshot"
+-              src="img/projects/web_site_screenshot_technomart.jpg"
+-              alt="picture"
+-              aria-label="picture of web-site"
+-            />
+-          </a>
+-        </div>
+-        <div class="box">
+-          <p class="box-text box-text_title">
+-            Techno Market
+-          </p>
+-          <p class="box-text box-text_data">
+-            November 2018
+-          </p>
+-          <h2 class="box-title sm-heading">Description</h2>
+-          <p class="box-text">
+-            Online hardware store
+-          </p>
+-          <h2 class="box-title sm-heading">Technologies</h2>
+-          <ul class="box-text technologies">
+-            <li>
+-              Fixed layout
+-            </li>
+-            <li>
+-              Accessibility
+-            </li>
+-          </ul>
+-          <p class="box-text"></p>
+-        </div>
+-      </div>
+     </main>
+     <footer id="main-footer">
+       Copyright © 2021
+diff --git a/source/sass/_config.scss b/source/sass/_config.scss
+index 2e9c98c..b445b38 100644
+--- a/source/sass/_config.scss
++++ b/source/sass/_config.scss
+@@ -1,8 +1,6 @@
+ $primary-color: #444;
+ $secondary-color: #eece1a;
+ $green-color: #7fff00;
+-$technomart-color: #293449;
+-
+ $show-home-image: true;
+ $home-image: url(../img/background.jpg);
+ $background-opacity: 0.9;
+@@ -25,32 +23,32 @@ $background-opacity: 0.9;
+ @mixin background {
+   @if $show-home-image {
+     &#bg-img {
+-      // background: $home-image rgba($primary-color, $background-opacity);
+-      background-image: $home-image;
+-      // background-color: rgba($primary-color, $background-opacity);
+-      // background-color: rgba(68, 68, 68, $background-opacity);
+-      // background-color: $primary-color;
+-
++      background: $home-image;
+       background-attachment: fixed;
+       background-size: cover;
+-      // filter: blur(8px);
+-      // -webkit-filter: blur(8px);
+ 
+-      //  &::after {
+-      //   content: "";
+-      //   position: absolute;
+-      //   top: 0;
+-      //   bottom: 0;
+-      //   right: 0;
+-      //   width: 100%;
+-      //   height: 100%;
+-      //   z-index: -1;
+-      //   background: rgba($primary-color, $background-opacity);
+-      //  }
++       &::after {
++        content: "";
++        position: absolute;
++        top: 0;
++        right: 0;
++        width: 100%;
++        height: 130%;
++        z-index: -1;
++        background: rgba($primary-color, $background-opacity);
++       }
+     }
+   }
+ }
+ 
++@function set-text-color($color) {
++  @if (lightness($color) > 40) {
++    @return #000;
++  } @else {
++    @return #fff;
++  }
++}
++
+ @mixin mediaSmMd {
+   @media screen and (max-width: 768px) {
+     @content;
+@@ -58,13 +56,13 @@ $background-opacity: 0.9;
+ }
+ 
+ @mixin mediaSm {
+-  @media screen and (max-width: 550px) {
++  @media screen and (max-width: 320px) {
+     @content;
+   }
+ }
+ 
+ @mixin mediaMd {
+-  @media screen and (min-width: 551px) {
++  @media screen and (min-width: 321px) {
+     @content;
+   }
+ }
+diff --git a/source/sass/_menu.scss b/source/sass/_menu.scss
+index f67e706..2e2f25e 100644
+--- a/source/sass/_menu.scss
++++ b/source/sass/_menu.scss
+@@ -5,7 +5,7 @@
+   position: absolute;
+   z-index: 3;
+   right: 35px;
+-  top: 31px;
++  top: 35px;
+   cursor: pointer;
+   @include easeOut;
+   background-color: $primary-color;
+diff --git a/source/sass/_mobile.scss b/source/sass/_mobile.scss
+index 72838b8..09c634f 100644
+--- a/source/sass/_mobile.scss
++++ b/source/sass/_mobile.scss
+@@ -32,10 +32,10 @@
+ 
+ @include mediaSm {
+   main {
+-    // padding: 30px;
+-    height: 100%;
++    padding: 30px;
++    // height: 100%;
+     min-width: 285px;
+-    padding-bottom: 0;
++    // padding-bottom: 62px;
+     // overflow: hidden;
+ 
+     &#home {
+@@ -85,14 +85,8 @@
+         padding-left: 1rem;
+ 
+         &.box-text_title {
+-          font-size: 45px;
++          font-size: 35px;
+           font-weight: 600;
+-          margin-bottom: 0;
+-        }
+-
+-        &.box-text_data {
+-          font-size: 17px;
+-          margin-top: -10px;
+         }
+       }
+ 
+@@ -123,8 +117,8 @@
+ 
+ @include mediaMd {
+   main {
+-    // padding: 30px;
+-    // padding-bottom: 60px;
++    padding: 30px;
++    padding-bottom: 320px;
+ 
+     &#home {
+       .lg-heading {
+@@ -163,17 +157,6 @@
+   .box-text {
+     font-size: 20px;
+     margin-bottom: 60px;
+-
+-    &.box-text_title {
+-      font-size: 52px;
+-      margin-bottom: -17px;
+-      margin-top: -23px;
+-    }
+-
+-    &.box-text_data {
+-      font-size: 17px;
+-      margin-top: -10px;
+-    }
+   }
+ 
+   .about-info {
+diff --git a/source/sass/main.scss b/source/sass/main.scss
+index 22c18c6..1957770 100644
+--- a/source/sass/main.scss
++++ b/source/sass/main.scss
+@@ -7,14 +7,13 @@
+ 
+ body {
+   @include background;
+-  // background: $primary-color;
+-
++  background: $primary-color;
++  color: set-text-color($primary-color);
+   height: 100%;
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.5 ;
+   // overflow-x: hidden;
+-  color: #fff;
+ }
+ 
+ // Headings
+@@ -29,19 +28,7 @@ h1, h2, h3 {
+   &.sm-heading {
+     margin-bottom: 2rem;
+     padding: 0.2rem 1rem;
+-    color: set-text-color($primary-color);
+-  }
+-}
+-
+-.wrapper-cat {
+-  .sm-heading {
+-    background: rgba(darken($primary-color, 100%), $background-opacity);
+-  }
+-}
+-
+-.wrapper-market {
+-  .sm-heading {
+-    background: rgba(darken($technomarket-color, 1), $background-opacity);
++    background: rgba(darken($primary-color, 1), 0.9);
+   }
+ }
+ 
+@@ -63,7 +50,7 @@ header {
+ main {
+   // padding: 4rem;
+   height: 100%;
+-  min-height: calc(100% - 60px);
++  min-height: calc(100vh - 60px);
+ 
+   .icons {
+     margin-top: 1rem;
+@@ -85,18 +72,6 @@ main {
+       margin-top: 20vh;
+     }
+   }
+-
+-  .box-text {
+-    &.box-text_title {
+-      font-size: 45px;
+-      font-weight: 600;
+-      margin-bottom: 0;
+-    }
+-
+-    &.box-text_data {
+-      font-size: 17px;
+-    }
+-  }
+ }
+ 
+ .about-info {
+@@ -137,20 +112,6 @@ main {
+    }
+ }
+ 
+-.wrapper {
+-  padding: 30px;
+-  padding-bottom: 120px;
+-
+-}
+-
+-.wrapper-cat {
+-  background: rgba($primary-color, $background-opacity);
+-}
+-
+-.wrapper-market {
+-  background: rgba($technomarket-color, $background-opacity);
+-}
+-
+ .projects {
+   display: grid;
+   grid-gap: 0.7rem;
