@@ -31,8 +31,19 @@
 }
 
 @include mediaSSm {
+  main {
+    &#home {
+      .lg-heading {
+          padding-left: 13px;
+          font-size: 48px;
+          line-height: 1;
+          margin-bottom: 20px;
+        }
+      }
+  }
   .container {
     width: 230px;
+    margin: auto;
   }
 }
 
