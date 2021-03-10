@@ -47,9 +47,9 @@
 
     .crop {
       width: 250px;
-      height: 400px;
       overflow: hidden;
       margin-bottom: 50px;
+      height: 400px;
 
       .screenshot {
         width: 250px;
@@ -99,9 +99,9 @@
 
     .crop {
       width: 250px;
-      height: 400px;
       overflow: hidden;
       margin-bottom: 50px;
+      height: 400px;
 
       .screenshot {
         width: 250px;
@@ -192,9 +192,15 @@
       margin-bottom: 1rem;
     }
 
-    .screenshot {
-      width: 250px;
+    .crop {
+      min-width: 250px;
+      overflow: hidden;
       height: auto;
+
+      .screenshot {
+        min-width: 250px;
+        height: auto;
+      }
     }
   }
 
@@ -261,11 +267,19 @@
       display: flex;
       min-width: 300px;
       overflow: visible;
+      padding-top: 100px;
     }
 
-    .screenshot {
-      min-width: 250px;
+    .crop {
+      width: 250px;
+      overflow: hidden;
+      margin-bottom: 50px;
       height: auto;
+
+      .screenshot {
+        min-width: 250px;
+        height: auto;
+      }
     }
 
     .box {
