@@ -30,6 +30,7 @@ h1, h2, h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     color: set-text-color($primary-color);
+    background: rgba(darken($primary-color, 1), $background-opacity);
   }
 }
 

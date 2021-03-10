@@ -30,6 +30,12 @@
   }
 }
 
+@include mediaSSm {
+  .container {
+    width: 230px;
+  }
+}
+
 @include mediaSm {
   main {
     // padding: 30px;
@@ -130,14 +136,20 @@
       .lg-heading {
         font-size: 60px;
       }
+
+      .sm-heading {
+        width: 100%;
+        margin-bottom: 50px;
+      }
     }
 
     .container {
-      max-width: fit-content;
+      width: 750px;
       margin: auto;
     }
 
     .sm-heading {
+      width: 350px;
       margin-bottom: 50px;
     }
 
