@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f24bf97-fa7b-46d2-b684-145067834026" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ap-portfolio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/markup.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/markup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/work.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613988891609</updated>
       <workItem from="1613988892750" duration="186000" />
+      <workItem from="1615306638593" duration="336000" />
     </task>
     <servers />
   </component>
@@ -71,7 +66,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
