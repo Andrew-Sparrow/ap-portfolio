@@ -42,6 +42,10 @@
     }
 
     &#markup {
+      .wrapper {
+        padding-top: 60px;
+      }
+
       .crop {
         width: 250px;
         height: 400px;
@@ -52,7 +56,7 @@
           width: 250px;
         }
       }
-      }
+    }
   }
   .container {
     width: 230px;
@@ -92,6 +96,7 @@
     &#markup {
       .wrapper {
         display: block;
+        padding-top: 60px;
       }
 
       .crop {
