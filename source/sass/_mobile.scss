@@ -41,23 +41,22 @@
       }
     }
 
-    &#markup {
-      .wrapper {
-        padding-top: 60px;
-      }
+    .wrapper {
+      padding-top: 60px;
+    }
 
-      .crop {
+    .crop {
+      width: 250px;
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 50px;
+
+      .screenshot {
         width: 250px;
-        height: 400px;
-        overflow: hidden;
-        margin-bottom: 50px;
-
-        .screenshot {
-          width: 250px;
-        }
       }
     }
   }
+
   .container {
     width: 230px;
     margin: auto;
@@ -93,48 +92,46 @@
       margin: auto;
     }
 
-    &#markup {
-      .wrapper {
-        display: block;
-        padding-top: 60px;
-      }
+    .wrapper {
+      display: block;
+      padding-top: 60px;
+    }
 
-      .crop {
+    .crop {
+      width: 250px;
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 50px;
+
+      .screenshot {
         width: 250px;
-        height: 400px;
-        overflow: hidden;
-        margin-bottom: 50px;
+      }
+    }
 
-        .screenshot {
-          width: 250px;
-        }
+    .box {
+      padding-left: 0;
+    }
+
+    .box-text {
+      font-size: 20px;
+      margin-bottom: 60px;
+      padding-left: 1rem;
+
+      &.box-text_title {
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 0;
       }
 
-      .box {
-        padding-left: 0;
+      &.box-text_data {
+        font-size: 17px;
+        margin-top: -10px;
       }
-
-      .box-text {
-        font-size: 20px;
-        margin-bottom: 60px;
-        padding-left: 1rem;
-
-        &.box-text_title {
-          font-size: 45px;
-          font-weight: 600;
-          margin-bottom: 0;
-        }
-
-        &.box-text_data {
-          font-size: 17px;
-          margin-top: -10px;
-        }
-      }
+    }
 
       .technologies {
         padding-left: 40px;
       }
-    }
 
     .projects {
       grid-template-columns: 1fr;
@@ -256,21 +253,19 @@
       }
     }
 
-    &#markup {
-      .projects {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-      .wrapper {
-        display: flex;
-        min-width: 300px;
-        overflow: visible;
-      }
+    .wrapper {
+      display: flex;
+      min-width: 300px;
+      overflow: visible;
+    }
 
-      .screenshot {
-        min-width: 250px;
-        height: auto;
-      }
+    .screenshot {
+      min-width: 250px;
+      height: auto;
     }
 
     .box {
