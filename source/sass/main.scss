@@ -216,7 +216,7 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
+  background: darken(rgba($primary-color, $background-opacity-projects), 90%);
   color: set-text-color($primary-color);
   height: 60px;
   position: static;
