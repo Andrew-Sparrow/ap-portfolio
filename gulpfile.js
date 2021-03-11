@@ -9,6 +9,10 @@ var sass = require("gulp-sass");
 
 sass.compiler = require('node-sass');
 
+const fusv = require('find-unused-sass-variables');
+// 'scss' is a folder
+let unused = fusv.find('source/sass');
+
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
@@ -19,6 +23,13 @@ var posthtml = require("gulp-posthtml");
 var del = require("del");
 var include = require("posthtml-include");
 var bem_validate = require("bem-validate");
+
+gulp.task("unused", function() {
+  console.log(unused.unused);
+  // ['$foo', '$bar', '$imunused']
+  console.log(unused.total);
+// Total number of variables in the files
+})
 
 gulp.task("clean", function () {
   return del("build");
