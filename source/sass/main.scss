@@ -13,7 +13,6 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5 ;
-  // overflow-x: hidden;
   color: #fff;
 }
 
@@ -22,27 +21,27 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400;
 
-  // &.lg-heading {
-  //   font-size: 6rem;
-  // }
-
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     color: set-text-color($primary-color);
-    background: rgba(darken($primary-color, 1), $background-opacity);
+    background: rgba(darken($primary-color, $darken-headings), $background-opacity-main);
   }
+}
+
+.cover {
+    background: rgba(darken($primary-color, $darken-cover), $background-opacity-cover);
 }
 
 .wrapper-cat {
   .sm-heading {
-    background: rgba(darken($primary-color, 1), $background-opacity);
+    background: rgba(darken($primary-color, $darken-headings), $background-opacity-headings);
   }
 }
 
 .wrapper-market {
   .sm-heading {
-    background: rgba(darken($technomarket-color, 1), $background-opacity);
+    background: rgba(darken($technomarket-color, $darken-headings), $background-opacity-headings);
   }
 }
 
@@ -140,18 +139,17 @@ main {
 }
 
 .wrapper {
-  padding-left: 30px;
-  padding-right: 30px;
-  // padding-top: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
   padding-bottom: 120px;
 }
 
 .wrapper-cat {
-  background: rgba($primary-color, $background-opacity);
+  background: rgba($primary-color, $background-opacity-projects);
 }
 
 .wrapper-market {
-  background: rgba($technomarket-color, $background-opacity);
+  background: rgba($technomarket-color, $background-opacity-projects);
 }
 
 .projects {
