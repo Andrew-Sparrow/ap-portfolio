@@ -30,7 +30,9 @@ h1, h2, h3 {
 }
 
 .cover {
-    background: rgba(darken($primary-color, $darken-cover), $background-opacity-cover);
+  // background: rgba(darken($primary-color, $darken-cover), $background-opacity-cover);
+  background: darken(rgba($primary-color, $background-opacity-projects), 90%);
+
 }
 
 .wrapper-cat {

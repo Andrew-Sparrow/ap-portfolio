@@ -8,7 +8,8 @@
   top: 31px;
   cursor: pointer;
   @include easeOut;
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background: darken(rgba($primary-color, $background-opacity-projects), 90%);
 
   .btn-line {
     width: 28px;
