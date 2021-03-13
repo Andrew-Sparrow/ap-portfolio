@@ -9,7 +9,9 @@
   cursor: pointer;
   @include easeOut;
   // background-color: $primary-color;
-  background: darken(rgba($primary-color, $background-opacity-projects), 90%);
+  // background: darken(rgba($primary-color, $background-opacity-projects), 90%);
+  background: rgba($primary-color, $background-opacity-main);
+
 
   .btn-line {
     width: 28px;
