@@ -66,6 +66,11 @@ main {
   height: 100%;
   min-height: calc(100% - 60px);
 
+  .training {
+    display: block;
+    color: rgba($secondary-color, $background-opacity-main);
+  }
+
   .icons {
     margin-top: 1rem;
 
@@ -88,12 +93,24 @@ main {
     opacity: 1;
   }
 
+  .fa-eye {
+    position: absolute;
+    left: 15%;
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  &#markup {
     .fa-eye {
-      position: absolute;
       top: 33%;
-      left: 15%;
-      color: rgba($color: #000000, $alpha: 0.5);
     }
+  }
+
+  &#vanilla-js {
+    .fa-eye {
+      top: 23%;
+      color: rgba($color: #fff, $alpha: .5) ;
+    }
+  }
 
   &#home {
     h1 {
@@ -102,6 +119,7 @@ main {
   }
 
   .box-text {
+    font-weight: 300;
     li {
       padding-bottom: 10px;
     }
