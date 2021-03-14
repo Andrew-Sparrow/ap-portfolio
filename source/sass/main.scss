@@ -30,7 +30,6 @@ h1, h2, h3 {
 }
 
 .cover {
-  // background: rgba(darken($primary-color, $darken-cover), $background-opacity-cover);
   background: darken(rgba($primary-color, $background-opacity-projects), 90%);
 
 }
@@ -103,6 +102,10 @@ main {
   }
 
   .box-text {
+    li {
+      padding-bottom: 10px;
+    }
+
     &.box-text_title {
       font-size: 45px;
       font-weight: 600;
@@ -208,8 +211,14 @@ main {
   }
 }
 
+.fab {
+  font-size: 24px;
+  padding-right: 10px;
+}
+
 .btn {
-  display: block;
+  display: flex;
+  justify-content: center;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
@@ -222,13 +231,13 @@ main {
 
 .btn-dark {
   @extend .btn;
-  background: darken($primary-color, 50);
+  background: darken($primary-color, 15%);
   color: #fff
 }
 
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: lighten($primary-color, 50%);
   color: #333;
 }
 
