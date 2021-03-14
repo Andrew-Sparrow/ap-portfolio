@@ -193,9 +193,17 @@
     .crop {
       min-width: 250px;
       overflow: hidden;
+      height: 865px;
+      margin-bottom: 0;
 
       .screenshot {
         min-width: 250px;
+      }
+    }
+
+    &#vanilla-js {
+      .crop {
+        height: 500px;
       }
     }
   }
@@ -271,7 +279,6 @@
     .crop {
       width: 250px;
       overflow: hidden;
-      margin-bottom: 50px;
 
       .screenshot {
         min-width: 250px;
