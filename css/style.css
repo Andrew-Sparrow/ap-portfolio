@@ -66,8 +66,9 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a;
-      cursor: default; }
+      color: #eece1a; }
+  .menu .nav-item:hover {
+    cursor: pointer; }
   .menu .nav-projects {
     text-decoration: underline;
     font-size: 30px;
@@ -75,7 +76,8 @@
     padding: 1rem 0;
     font-weight: 300;
     color: #fff;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    cursor: default; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -187,6 +189,8 @@ main {
     color: rgba(0, 0, 0, 0.5); }
   main#markup .fa-eye {
     top: 33%; }
+  main#react .fa-eye {
+    top: 35%; }
   main#vanilla-js .fa-eye {
     top: 23%; }
   main#vanilla-js .fa-white {
@@ -419,6 +423,8 @@ main {
       min-width: 250px; }
   main#vanilla-js .crop {
     height: 500px; }
+  main#react .crop {
+    height: 550px; }
   .box-text {
     font-size: 20px;
     margin-bottom: 60px; }
@@ -430,7 +436,7 @@ main {
       font-size: 17px;
       margin-top: -10px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
