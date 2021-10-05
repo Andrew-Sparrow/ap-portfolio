@@ -111,8 +111,11 @@
 
     &.current > a {
       color: $secondary-color;
-      cursor: default;
     }
+  }
+
+  .nav-item:hover {
+    cursor: pointer;
   }
 
   .nav-projects {
@@ -123,6 +126,7 @@
     font-weight: 300;
     color: set-text-color($primary-color);
     margin-bottom: 0;
+    cursor: default;
   }
 
   .nav-link {
