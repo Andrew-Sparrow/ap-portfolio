@@ -253,6 +253,7 @@ main {
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
+    transition-duration: .4s;
   }
 }
 
